@@ -88,6 +88,9 @@ const Products = () => {
                 <h1 className='product-price'>2300</h1>
             </div>       
 
+
+
+
         
          </div>
 

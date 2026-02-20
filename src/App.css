@@ -34,7 +34,7 @@ body {
   color: var(--text-color);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
   border-bottom: 1px solid var(--border);
-  position: sticky;
+  /* position: sticky; */
   top: 0;
 }
 
@@ -174,3 +174,44 @@ img.product-image {
   filter:brightness(0.9rem)
 }
 
+/* Order */
+.order-form {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: white;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.order-form h2 {
+  margin-bottom: 20px;
+  color: var(--text-color);
+} 
+.order-form label {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--text-color);
+}
+.order-form input, .order-form textarea {
+  width: 100%;
+  padding: 10px;    
+  margin-bottom: 15px;    
+  border: 1px solid var(--border);
+  border-radius: 5px;
+}
+.order-form button {
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+.order-form button:hover {
+  background-color: var(--secondary-color);
+  opacity:0.8;
+  filter:brightness(0.9rem)
+}
