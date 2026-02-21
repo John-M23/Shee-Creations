@@ -215,3 +215,28 @@ img.product-image {
   opacity:0.8;
   filter:brightness(0.9rem)
 }
+
+/* About Us  */
+.about-section {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: white;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.about-section h2 {
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+.about-section p {
+  color: var(--text-color);
+  font-size: 16px;
+  line-height: 1.5;
+}
+.about-section .product-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
