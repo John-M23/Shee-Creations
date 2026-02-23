@@ -1,29 +1,51 @@
+import { useState } from "react";
+
 function Order() {
-    return (
-        <div>
-          <form className="order-form">
-            <h2>Place Your Custom Order</h2>
-            <label htmlFor="name">Name:</label>
-            <input type="text" id="name" name="name" required />
-            <label htmlFor="contact">Contact Information:</label>
-            <input type="text" id="contact" name="contact" required />
-            <label htmlFor="details">Order Details:</label>
-            <textarea id="details" name="details" rows="4" required placeholder="PLEASE INCLUDE SIZE AND COLOUR"></textarea>
-        <label htmlFor="photos">Upload Reference Photos:</label>
-            <input type="file" id="photos" name="photos" accept="image/*" multiple />
-            <button type="submit">Submit Order</button>
-          
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
+    const name = e.target.name.value;
+    const contact = e.target.contact.value;
+    const details = e.target.details.value;
 
+    const phoneNumber = "254110304492"; // Replace with your real number (no +)
 
+    const message = `Hello Shee Creations,%0A%0A
+Name: ${name}%0A
+Contact: ${contact}%0A
+Order Details: ${details}`;
 
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
 
+    window.open(whatsappURL, "_blank");
+  };
 
-             </form>
-        </div>
-       
-    );
-};
+  return (
+    <section id="Order">
+      <div>
+        <form className="order-form" onSubmit={handleSubmit}>
+          <h2>Place Your Custom Order</h2>
+
+          <label>Name:</label>
+          <input type="text" name="name" required />
+
+          <label>Contact Information:</label>
+          <input type="text" name="contact" required />
+
+          <label>Order Details:</label>
+          <textarea
+            name="details"
+            rows="4"
+            required
+            placeholder="PLEASE INCLUDE SIZE AND COLOUR"
+          ></textarea>
+
+          <button type="submit">Submit Order</button>
+        </form>
+      </div>
+    </section>
+  );
+}
 
 export default Order;

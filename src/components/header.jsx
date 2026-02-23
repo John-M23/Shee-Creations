@@ -7,9 +7,9 @@ function Header() {
       </div>
          <nav className="nav">
             <a href="#">Home</a>
-            <a href="#">Shop</a>
-            <a href="#">Custom Orders</a>
-            <a href="#">About</a>
+            <a href="#Products">Shop</a>
+            <a href="#Order">Custom Orders</a>
+            <a href="#About">About Us</a>
             <a href="#">Contact</a> 
 
             

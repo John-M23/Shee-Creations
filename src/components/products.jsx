@@ -1,103 +1,154 @@
-import React from 'react';
-import product1 from '../assets/images/products/crotchet1.png'; 
+import React, { useState } from "react";
+import product1 from "../assets/images/products/crotchet1.png";
+
+const phoneNumber = "254110304492";
+
+const productsData = [
+  {
+    id: 1,
+    name: "Crochet Pink Top",
+    image: product1,
+    description: "Handmade crochet top.",
+    sizes: {
+      XL: 2300,
+      XXL: 2600,
+      XXXL: 3000,
+    },
+  },
+  {
+    id: 2,
+    name: "Crochet Hat",
+    image: product1,
+    description: "Warm crochet hat.",
+    sizes: {
+      Toddler: 1200,
+      Adult: 1800,
+    },
+  },
+  {
+    id: 3,
+    name: "Crochet Bag",
+    image: product1,
+    description: "Stylish handmade bag.",
+    sizes: {
+      "One Size": 3500,
+    },
+  },
+
+
+ {
+    id: 3,
+    name: "Crochet Bag",
+    image: product1,
+    description: "Stylish handmade bag.",
+    sizes: {
+      "One Size": 3500,
+    },
+  },
+
+
+   {
+    id: 3,
+    name: "Crochet Bag",
+    image: product1,
+    description: "Stylish handmade bag.",
+    sizes: {
+      "One Size": 3500,
+    },
+  },
+
+   {
+    id: 3,
+    name: "Crochet Bag",
+    image: product1,
+    description: "Stylish handmade bag.",
+    sizes: {
+      "One Size": 3500,
+    },
+  },
+
+
+
+];
+
 const Products = () => {
-    return (
-        <div className='product-list'>
-            <div className='product-card'>
-                <img src={product1} alt="Product 1" className='product-image    '/>
-          
-                <h2>Product 1</h2>
-                <p>PDEDJJJ</p>
-                <button className='shop-now'>Shop Now</button>
-                <h1 className='product-price'>2300</h1>
-           
-            </div>
 
-        <div className='product-card'>
-                <img src={product1} alt="Product 1" className='product-image    '/>
-          
-                <h2>Product 1</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel sapien eget nunc efficitur bibendum.</p>
-                <button className='shop-now'>Shop Now</button>
-                <h1 className='product-price'>2300</h1>
-            </div>
+  const [selectedOptions, setSelectedOptions] = useState({});
 
+  const handleSizeChange = (productId, size) => {
+    setSelectedOptions({
+      ...selectedOptions,
+      [productId]: size,
+    });
+  };
 
+  const handleOrder = (product) => {
+    const selectedSize = selectedOptions[product.id];
 
+    if (!selectedSize) {
+      alert("Please select an option first.");
+      return;
+    }
 
-         <div className='product-card'>
-                <img src={product1} alt="Product 1" className='product-image    '/>
-          
-                <h2>Product 1</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel sapien eget nunc efficitur bibendum.</p>
-                <button className='shop-now'>Shop Now</button>
-                <h1 className='product-price'>2300</h1>
-            </div>       
+    const price = product.sizes[selectedSize];
 
-        
-         <div className='product-card'>
-                <img src={product1} alt="Product 1" className='product-image    '/>
-          
-                <h2>Product 1</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel sapien eget nunc efficitur bibendum.</p>
-                <button className='shop-now'>Shop Now</button>
-                <h1 className='product-price'>2300</h1>
-            </div>   
+    const message = `
+Hello Shee Creations,
 
+I would like to order:
 
+Product: ${product.name}
+Option: ${selectedSize}
+Price: Ksh ${price}
 
+Please confirm availability.
+    `;
 
-        
-         <div className='product-card'>
-                <img src={product1} alt="Product 1" className='product-image    '/>
-          
-                <h2>Product 1</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel sapien eget nunc efficitur bibendum.</p>
-                <button className='shop-now'>Shop Now</button>
-                <h1 className='product-price'>2300</h1>
-            </div>   
+    const whatsappURL =
+      `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
-        
-         <div className='product-card'>
-                <img src={product1} alt="Product 1" className='product-image    '/>
-          
-                <h2>Product 1</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel sapien eget nunc efficitur bibendum.</p>
-                <button className='shop-now'>Shop Now</button>
-                <h1 className='product-price'>2300</h1>
-            </div>   
+    window.open(whatsappURL, "_blank");
+  };
 
+  return (
+    <section id="Products">
+      <div className="product-list">
+        {productsData.map((product) => (
+          <div className="product-card" key={product.id}>
+            <img
+              src={product.image}
+              alt={product.name}
+              className="product-image"
+            />
 
-          <div className='product-card'>
-                <img src={product1} alt="Product 1" className='product-image    '/>
-          
-                <h2>Product 1</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel sapien eget nunc efficitur bibendum.</p>
-                <button className='shop-now'>Shop Now</button>
-                <h1 className='product-price'>2300</h1>
-            </div>   
+            <h2>{product.name}</h2>
+            <p>{product.description}</p>
 
+            <select
+              value={selectedOptions[product.id] || ""}
+              onChange={(e) =>
+                handleSizeChange(product.id, e.target.value)
+              }
+            >
+              <option value="">Select Option</option>
+              {Object.keys(product.sizes).map((size) => (
+                <option key={size} value={size}>
+                  {size} - Ksh {product.sizes[size]}
+                </option>
+              ))}
+            </select>
 
-
-          <div className='product-card'>
-                <img src={product1} alt="Product 1" className='product-image    '/>
-          
-                <h2>Product 1</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel sapien eget nunc efficitur bibendum.</p>
-                <button className='shop-now'>Shop Now</button>
-                <h1 className='product-price'>2300</h1>
-            </div>       
-
-
-
-
-        
-         </div>
-
-     
-
-        
-    );
+            <button
+              className="shop-now"
+              onClick={() => handleOrder(product)}
+            >
+              Order on WhatsApp
+            </button>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
 };
 
 export default Products;

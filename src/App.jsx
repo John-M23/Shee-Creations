@@ -1,5 +1,5 @@
 import Header from "./components/header";
-// import Footer from "./components/footer.jsx";
+import Footer from "./components/footer.jsx";
 import Hero from "./components/hero";
 import Products from "./components/products";
 import Order from "./components/order.jsx";
@@ -18,8 +18,8 @@ function App() {
      <Order />
       <About />
       <Testimonial />
-{/*       
-      <Footer /> */}
+      
+      <Footer />
 
       </>
       
