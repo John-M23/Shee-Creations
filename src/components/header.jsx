@@ -1,25 +1,53 @@
-import logo from '../assets/images/logo.png';
+import { Link, useNavigate } from "react-router-dom";
+import logo from "../assets/images/logo.png";
+
 function Header() {
-    return (
-        <header className="header">
-            <div className="logo">
-        <img src={logo} alt="Sheeh Collection Logo" />
+  const navigate = useNavigate();
+
+  const goHomeAndScroll = (id) => {
+    navigate("/");
+    setTimeout(() => {
+      const section = document.getElementById(id);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 100);
+  };
+
+  return (
+    <header className="header">
+      <div className="logo">
+        <img
+          src={logo}
+          alt="Sheeh Collection Logo"
+          onClick={() => navigate("/")}
+          style={{ cursor: "pointer"  }}
+        />
       </div>
-         <nav className="nav">
-            <a href="#">Home</a>
-            <a href="#Products">Shop</a>
-            <a href="#Order">Custom Orders</a>
-            <a href="#About">About Us</a>
-            <a href="#">Contact</a> 
 
-            
-            
-            </nav>            
+      <nav className="nav">
+        <Link
+  to="/"
+  className="shop-now"
+  onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+>
+  Home
+</Link>
 
+        <button onClick={() => goHomeAndScroll("Products")} className="shop-now">
+          Shop
+        </button>
 
+        <button onClick={() => goHomeAndScroll("Order")} className="shop-now">
+          Custom Orders
+        </button>
 
-        </header>
-    );
+        <button onClick={() => goHomeAndScroll("About")} className="shop-now">
+          About Us
+        </button>
+      </nav>
+    </header>
+  );
 }
 
 export default Header;
