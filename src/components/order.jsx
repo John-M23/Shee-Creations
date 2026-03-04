@@ -9,7 +9,7 @@ function Order() {
     const contact = e.target.contact.value;
     const details = e.target.details.value;
 
-    const phoneNumber = "254110304492"; // Replace with your real number (no +)
+    const phoneNumber = "254704464147";
 
     const message = `Hello Shee Creations,%0A%0A
 Name: ${name}%0A

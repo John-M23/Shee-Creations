@@ -14,7 +14,7 @@ function ProductOrder() {
   const [color, setColor] = useState("");
   const [quantity, setQuantity] = useState(1);
   const [deadline, setDeadline] = useState("");
-
+ const phoneNumber = "254704464147";
   // If product does not exist
   if (!product) {
     return (
@@ -42,12 +42,12 @@ I would like to order:
 Product: ${product.name}
 Size: ${size}
 Color: ${color}
-Quantity: ${quantity}
+Quantity: ${quantity}         
 Deadline: ${deadline}
 Total Price: Ksh ${totalPrice}
     `;
 
-    const whatsappURL = `https://wa.me/254110304492?text=${encodeURIComponent(
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
       message
     )}`;
 
