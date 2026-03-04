@@ -45,6 +45,9 @@ function Header() {
         <button onClick={() => goHomeAndScroll("About")} className="shop-now">
           About Us
         </button>
+        <button onClick={() => goHomeAndScroll("Contact")} className="shop-now">
+          Contact Us
+        </button>
       </nav>
     </header>
   );
