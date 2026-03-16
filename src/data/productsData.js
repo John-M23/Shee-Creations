@@ -1,4 +1,4 @@
-import product1 from "../assets/images/products/Crotchet1.png";
+import product1 from "../assets/Images/Products/Crotchet1.png";
 
 const productsData = [
   {

@@ -1,4 +1,4 @@
-import product1 from '../assets/images/products/crotchet1.png'; 
+import product1 from "../assets/Images/Products/Crotchet1.png"; 
 
 function About(){
     return(
