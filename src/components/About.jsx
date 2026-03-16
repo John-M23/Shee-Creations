@@ -1,5 +1,4 @@
-import product1 from "../assets/Images/Products/Crotchet1.png"; 
-
+import product1 from "../assets/Images/Products/crotchet1.png";
 function About(){
     return(
         <section id="About">
