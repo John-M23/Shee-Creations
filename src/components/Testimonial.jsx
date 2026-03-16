@@ -1,5 +1,5 @@
 import { useState } from "react";
-import product1 from '../assets/images/products/crotchet1.png'; // your image
+import product1 from '../assets/images/products/Crotchet1.png'; // your image
 
 function Testimonial() {
   const testimonials = [
