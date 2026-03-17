@@ -3,17 +3,24 @@ import logo from "../assets/Images/logo.png";
 
 function Header() {
   const navigate = useNavigate();
+const goHomeAndScroll = (id) => {
+  navigate("/");
 
-  const goHomeAndScroll = (id) => {
-    navigate("/");
-    setTimeout(() => {
-      const section = document.getElementById(id);
-      if (section) {
-        section.scrollIntoView({ behavior: "smooth" });
-      }
-    }, 100);
-  };
+  setTimeout(() => {
+    const section = document.getElementById(id);
 
+    if (section) {
+      const headerOffset = 120; // 🔥 adjust if needed
+      const elementPosition = section.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
+  }, 100);
+};
   return (
     <header className="header">
       <div className="logo">
@@ -34,11 +41,11 @@ function Header() {
   Home
 </Link>
 
-        <button onClick={() => goHomeAndScroll("Products")} className="shop-now">
+        <button onClick={() => goHomeAndScroll("products")} className="shop-now">
           Shop
         </button>
 
-        <button onClick={() => goHomeAndScroll("Order")} className="shop-now">
+        <button onClick={() => goHomeAndScroll("order")} className="shop-now">
           Custom Orders
         </button>
 

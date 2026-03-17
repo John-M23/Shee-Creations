@@ -22,7 +22,7 @@ Order Details: ${details}`;
   };
 
   return (
-    <section id="Order">
+    <section id="order">
       <div>
         <form className="order-form" onSubmit={handleSubmit}>
           <h2>Place Your Custom Order</h2>
@@ -41,7 +41,7 @@ Order Details: ${details}`;
             placeholder="PLEASE INCLUDE SIZE AND COLOUR"
           ></textarea>
 
-          <button type="submit">Submit Order</button>
+          <button  className="shop-now"type="submit">Submit Order</button>
         </form>
       </div>
     </section>
