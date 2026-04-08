@@ -29,7 +29,7 @@ function ProductOrder() {
   const totalPrice = unitPrice * quantity;
 
   const handleOrder = () => {
-    if (!size || !color || !deadline) {
+    if (!size || !deadline) {
       alert("Please fill all required fields.");
       return;
     }

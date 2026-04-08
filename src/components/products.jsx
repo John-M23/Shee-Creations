@@ -21,11 +21,12 @@ function Products() {
             {/* PRODUCT INFO */}
             <h3>{product.name}</h3>
             <p>{product.description}</p>
+            <h3>Ksh {product.prize}</h3>
 
             {/* PRICE (optional if exists in data) */}
-            {product.price && (
+            {/* {product.price && (
               <span className="price">Ksh {product.price}</span>
-            )}
+            )} */}
 
             {/* BUTTON */}
             <button
