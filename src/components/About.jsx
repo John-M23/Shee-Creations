@@ -1,4 +1,4 @@
-import product1 from "../assets/Images/Products/crotchet1.png";
+import  logo from "../assets/Images/logo.png";
 function About(){
     return(
         <section id="About">
@@ -9,8 +9,8 @@ function About(){
                     
 
                       <img 
-                        src={product1} 
-                        alt="Product 1" 
+                        src={logo} 
+                        alt="Logo" 
                         className="about-image"
                     />
                     {/* TEXT FIRST (Left side) */}

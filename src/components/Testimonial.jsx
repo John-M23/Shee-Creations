@@ -1,5 +1,5 @@
 import { useState } from "react";
-import product1 from "../assets/Images/Products/crotchet1.png";
+import logo from "../assets/Images/logo.png";
 function Testimonial() {
   const testimonials = [
     {
@@ -31,7 +31,7 @@ function Testimonial() {
       <h2>What Our Customers Say</h2>
 
       <div className="testimonial-card">
-        <img src={product1} alt="Customer" className="testimonial-image" />
+        <img src={logo} alt="Customer" className="testimonial-image" />
         <div className="testimonial-text">
           <p>"{testimonials[current].text}"</p>
           <h3>- {testimonials[current].name}</h3>
