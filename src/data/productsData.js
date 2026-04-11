@@ -1,10 +1,10 @@
 import product1 from "../assets/Images/Products/Crotchet1.png";
-import product2 from "../assets/images/products/product2.png";
-import product3 from "../assets/images/products/product3.png";
+import product2 from "../assets/Images/products/product2.png";
+import product3 from "../assets/Images/products/product3.png";
 import product4 from "../assets/Images/Products/product4.png";
-import product5 from "../assets/images/products/product5.png";
-import product6 from "../assets/images/products/product6.png";
-import product7 from "../assets/images/products/product7.png";
+import product5 from "../assets/Images/products/product5.png";
+import product6 from "../assets/Images/products/product6.png";
+import product7 from "../assets/Images/products/product7.png";
 
 
 
