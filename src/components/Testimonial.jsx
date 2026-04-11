@@ -1,5 +1,5 @@
 import { useState } from "react";
-import logo from "../assets/Images/logo.png";
+import logo from "../assets/images/Logo.png";
 function Testimonial() {
   const testimonials = [
     {
