@@ -30,9 +30,9 @@ function Footer() {
         <p> @2024 Sheeh Creation</p>
         <p>Powered by M23 Creatives</p>
         <div className="quick-links">
-          <a href="#Home">Home</a>
-          <a href="#Products">Products</a>
-          <a href="#Order">Custom Orders</a>
+          <a href="/">Home</a>
+          <a href="#products">Products</a>
+          <a href="#order">Custom Orders</a>
           <a href="#About">About Us</a>
         </div>
       </div>
