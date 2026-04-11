@@ -12,7 +12,7 @@ function Footer() {
         <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
           <FaInstagram />
         </a>
-        <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.tiktok.com/@miss_shee.creations?_r=1&_t=ZS-95RmnVBsVH7" target="_blank" rel="noopener noreferrer">
           <SiTiktok />
         </a>
         <a href="https://www.x.com" target="_blank" rel="noopener noreferrer">

@@ -24,9 +24,9 @@ function Products() {
             <h3>Ksh {product.prize}</h3>
 
             {/* PRICE (optional if exists in data) */}
-            {/* {product.price && (
+            {product.price && (
               <span className="price">Ksh {product.price}</span>
-            )} */}
+            )}
 
             {/* BUTTON */}
             <button
@@ -39,7 +39,19 @@ function Products() {
           </div>
         ))}
       </div>
+
+
+      <div>
+          
+
+
+      </div>
     </section>
+  
+
+
+
+
   );
 }
 
