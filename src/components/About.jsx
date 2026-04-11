@@ -1,4 +1,4 @@
-import  logo from "../assets/images/Logo.png";
+import  logo from "../assets/Images/Logo.png";
 function About(){
     return(
         <section id="About">
