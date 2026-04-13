@@ -19,6 +19,7 @@ const productsData = [
     description: "Handmade crochet top.",
     prize: 2000,
     sizes: { XL: 2000, XXL: 2000, XXXL: 2000 },
+    category: "ladies",
   },
   {
     id: 2,
@@ -27,6 +28,7 @@ const productsData = [
     description: "Warm crochet hat. <br/> 1800",
     prize: 1800,
     sizes: { Toddler: 1200, Adult: 1800 },
+    category: "toddlers",
   },
   {
     id: 3,
@@ -34,6 +36,7 @@ const productsData = [
     image: product3,
     description: "Stylish handmade bag.",
     sizes: { "One Size": 3500 },
+    category: "ladies",
   },
   {
     id: 4,
@@ -41,6 +44,7 @@ const productsData = [
     image: product4,
     description: "Cozy crochet scarf.",
     sizes: { S: 1500, M: 2000, L: 2500 }, 
+    category: "mens",
   },
 
   {

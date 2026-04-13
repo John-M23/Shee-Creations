@@ -27,7 +27,7 @@ function Footer() {
       </div>
       <div className="footer-text">
         <p>call/whatsup +254704464147</p>
-        <p> @2024 Sheeh Creation</p>
+        <p> @2026 Sheeh Creation</p>
         <p>Powered by M23 Creatives</p>
         <div className="quick-links">
           <a href="/">Home</a>

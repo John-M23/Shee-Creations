@@ -8,10 +8,20 @@ function Products() {
     <section className="products-section" id="products">
       <h2 className="section-title">Our Products</h2>
 
+
+      <div className="category-button">
+          <button onClick={() => navigate("/category/accessories")}>Accesories</button>  
+          <button onClick={() => navigate("/category/ladies")}>Ladies</button>
+          <button onClick={() => navigate("/category/mens")}>Mens</button>
+          <button onClick={() => navigate("/category/toddlers")}>Toddlers</button>
+
+
+
+            </div>
       <div className="products-list">
         {productsData.map((product) => (
           <div key={product.id} className="product-card">
-            
+      
             {/* PRODUCT IMAGE */}
             <img
               src={product.image}
