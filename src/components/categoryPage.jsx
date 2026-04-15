@@ -1,45 +1,42 @@
-import { useParams, useNavigate  } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import productsData from "../data/productsData";
 
-
 function CategoryPage() {
-    const {category} = useParams();
-    const navigate = useNavigate();
+  const { category } = useParams();
+  const navigate = useNavigate();
 
+  const filteredProducts = productsData.filter((product) =>
+    product.category.toLowerCase() === category.toLowerCase()
+  );
 
-    // Filter products based on category
-    const filteredProducts = productsData.filter ((product) =>
-        product.category === category);
+  return (
+    <section className="products-section" id="products">
+      <h2 className="section-title">
+        {category.toUpperCase()}
+      </h2>
 
-    return (
-<section className="products-section" id="products">
-<h2 className="section-title">
-    {category.toUpperCase()}
-</h2>
+      <div className="products-list">
+        {filteredProducts.map((product) => (
+          <div key={product.id} className="product-card">
 
-<div className="products-list">
-    {filteredProducts.map((product) => (
-        <div key={product.id} className="product-card">
-            {/* PRODUCT IMAGE */}
-            <img
-              src={product.image}
-              alt={product.name}
-            />
+            <img src={product.image} alt={product.name} />
+
             <h3>{product.name}</h3>
             <p>{product.description}</p>
-            <h3>Ksh {product.prize}</h3>
-    
-    <button className="shop-now" onClick={() => navigate(`/product/${product.id}`)}>
-                Order Now   
-    </button>
-        </div>
-    ))}
-</div>
-</section>
-    );
+            <h3>Ksh {product.price}</h3>
+
+            <button
+              className="shop-now"
+              onClick={() => navigate(`/product/${product.id}`)}
+            >
+              Order Now
+            </button>
+
+          </div>
+        ))}
+      </div>
+    </section>
+  );
 }
 
- export default CategoryPage;
-
-
-
+export default CategoryPage;

@@ -72,6 +72,7 @@ const productsData = [
     description: "Top.",
     prize: 7000,
     sizes: { S: 5000, M: 6000, L: 7000 },
+    category: "ladies",
   }  ,
   { 
   id: 6,
@@ -81,6 +82,7 @@ const productsData = [
     prize: 5000,
     sizes: { S: 4000, M: 5000, L: 6000 }, 
     category: "mens", 
+
 },
 
 {
@@ -99,6 +101,7 @@ const productsData = [
     image: product8,
     description: "Cozy crochet top.",
     sizes: { "One Size": 8000 },
+    category: "ladies",
   },
  {
     id: 9,
@@ -133,7 +136,7 @@ const productsData = [
     image: product11,  
     description: "Stylish crochet shirt.",
     sizes: { "One Size": 3000 },
-    category: "accessories",
+    category: "Mens",
  }
   
 //  ,
@@ -153,7 +156,7 @@ const productsData = [
     image: product13,  
     description: "Stylish crochet shirt.",
     sizes: { "One Size": 3000 },
-    category: "accessories",
+    category: "Mens",
  }
   
  ,
@@ -163,7 +166,7 @@ const productsData = [
     image: product14,  
     description: "Stylish crochet shirt.",
     sizes: { "One Size": 3000 },
-    category: "accessories",
+    category: "Mens",
  }
   
  ,
@@ -173,7 +176,7 @@ const productsData = [
     image: product15,  
     description: "Stylish crochet shirt.",
     sizes: { "One Size": 3000 },
-    category: "accessories",
+    category: "Mens",
  }
   
  ,
@@ -183,7 +186,7 @@ const productsData = [
     image: product16,  
     description: "Stylish crochet shirt.",
     sizes: { "One Size": 3000 },
-    category: "accessories",
+    category: "Mens",
  }
   
  ,
@@ -193,7 +196,7 @@ const productsData = [
     image: product17,  
     description: "Stylish crochet shirt.",
     sizes: { "One Size": 3000 },
-    category: "accessories",
+    category: "Mens",
  }
   
  ,
@@ -203,7 +206,7 @@ const productsData = [
     image: product18,  
     description: "Stylish crochet shirt.",
     sizes: { "One Size": 3000 },
-    category: "accessories",
+    category: "Mens",
  }
   
  ,
@@ -233,7 +236,7 @@ const productsData = [
     image: product21,  
     description: "Stylish crochet dress.",
     sizes: { "One Size": 3000 },
-    category: "accessories",
+    category: "ladies",
  }
   
  ,
@@ -243,7 +246,7 @@ const productsData = [
     image: product22,  
     description: "Stylish crochet dress.",
     sizes: { "One Size": 3000 },
-    category: "accessories",
+    category: "toddlers",
  }
   
  ,
@@ -253,7 +256,7 @@ const productsData = [
     image: product23,  
     description: "Stylish crochet shirt.",
     sizes: { "One Size": 3000 },
-    category: "accessories",
+    category: "toddlers",
  }
 
 

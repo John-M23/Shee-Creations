@@ -1,67 +1,87 @@
-import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 import productsData from "../data/productsData";
 
 function Products() {
-  const navigate = useNavigate();
+  const [activeCategory, setActiveCategory] = useState("all");
+
+  // FILTER LOGIC
+  const filteredProducts =
+    activeCategory === "all"
+      ? productsData
+      : productsData.filter(
+          (product) => product.category === activeCategory
+        );
 
   return (
     <section className="products-section" id="products">
       <h2 className="section-title">Our Products</h2>
 
-
+      {/* CATEGORY BUTTONS */}
       <div className="category-button">
-          <button onClick={() => navigate("/category/accessories")}>Accesories</button>  
-          <button onClick={() => navigate("/category/ladies")}>Ladies</button>
-          <button onClick={() => navigate("/category/mens")}>Mens</button>
-          {/* <button onClick={() => navigate("/category/toddlers")}>Toddlers</button> */}
+        <button
+          className={activeCategory === "all" ? "active" : ""}
+          onClick={() => setActiveCategory("all")}
+        >
+          All
+        </button>
+
+        <button
+          className={activeCategory === "accessories" ? "active" : ""}
+          onClick={() => setActiveCategory("accessories")}
+        >
+          Accessories
+        </button>
+
+        <button
+          className={activeCategory === "ladies" ? "active" : ""}
+          onClick={() => setActiveCategory("ladies")}
+        >
+          Ladies
+        </button>
+
+        <button
+          className={activeCategory === "mens" ? "active" : ""}
+          onClick={() => setActiveCategory("mens")}
+        >
+          Mens
+        </button>
 
 
+        <button
+          className={activeCategory === "toddlers" ? "active" : ""}
+          onClick={() => setActiveCategory("toddlers")}
+        >
+          Toddlers
+        </button>
+      </div>
 
-            </div>
+      {/* PRODUCTS GRID */}
       <div className="products-list">
-        {productsData.map((product) => (
+        {filteredProducts.map((product) => (
           <div key={product.id} className="product-card">
-      
-            {/* PRODUCT IMAGE */}
-            <img
-              src={product.image}
-              alt={product.name}
-            />
+            
+            {/* IMAGE */}
+            <img src={product.image} alt={product.name} />
 
-            {/* PRODUCT INFO */}
+            {/* INFO */}
             <h3>{product.name}</h3>
             <p>{product.description}</p>
-            <h3>Ksh {product.prize}</h3>
 
-            {/* PRICE (optional if exists in data) */}
-            {product.price && (
-              <span className="price">Ksh {product.price}</span>
-            )}
+            {/* PRICE */}
+            <h3>Ksh {product.price}</h3>
 
             {/* BUTTON */}
-            <button
-              className="shop-now"
-              onClick={() => navigate(`/product/${product.id}`)}
-            >
-              Order Now
-            </button>
+<button
+  className="shop-now"
+  onClick={() => navigate(`/product/${product.id}`)}
+>
+  Order Now
+</button>
 
           </div>
         ))}
       </div>
-
-
-      <div>
-          
-
-
-      </div>
     </section>
-  
-
-
-
-
   );
 }
 

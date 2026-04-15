@@ -28,7 +28,7 @@ function Testimonial() {
 
   return (
     <section className="testimonial-section">
-      <h2>What Our Customers Say</h2>
+      <h2 className="section-title">What Our Customers Say</h2>
 
       <div className="testimonial-card">
         <img src={logo} alt="Customer" className="testimonial-image" />

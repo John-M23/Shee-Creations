@@ -17,6 +17,7 @@
 
 html{
   scroll-behavior: smooth;
+  
 }
 
 body{
@@ -24,6 +25,8 @@ body{
   font-family:sans-serif;
   background:var(--bg-main);
   color:var(--text-color);
+  height:100%;
+  overflow-x: hidden;
 }
 
 img{
@@ -43,7 +46,7 @@ img{
   background:var(--primary-color);
   position:sticky;
   top:0;
-  z-index:1000;
+  z-index:2000;
   box-shadow:0 2px 6px rgba(0,0,0,0.1);
 }
 
@@ -158,60 +161,89 @@ section{
 }
 
 /* ---------------- PRODUCTS ---------------- */
-.category-buttons {
-  display: flex;
-  gap: 15px;
-  margin-bottom: 30px;
+
+
+/* SECTION */
+.products-section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: auto;
+  overflow:visible;
 }
+
+/* CATEGORY BAR */
+.category-button {
+  position: sticky;
+  top: 80px;
+  z-index: 1500;
+
+  background: #fff;
+  padding: 10px;
+
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  border-bottom: 1px solid #ddd;
+}
+
+
+
 
 .category-button button {
-  padding: 10px 20px;
+  padding: 8px 16px;
   border: none;
-  background: var(--accent-color);
-  color: white;
   border-radius: 20px;
+  background: #eee;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: 0.3s;
 }
 
-
-
-
-
-.products-section{
-  padding:60px 5%;
-  background:#f9f9f9;
+.category-button button:hover {
+  background: #D81B60;
+  color: white;
 }
 
-.products-list{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-  gap:20px;
- 
+.category-button button.active {
+  background: #D81B60;
+  color: white;
 }
 
-.product-card{
-  background:white;
-  border-radius:12px;
-  padding:15px;
-  text-align:center;
+/* PRODUCTS GRID */
+.products-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
 
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-
-  box-shadow:0 4px 12px rgba(0,0,0,0.1);
-  transition:all 0.3s ease;
-  will-change:transform;
+  margin-top: 20px;
 }
 
-.product-card img{
-  transition:transform 0.4s ease;
-  width: 100% ;
-  height: 200px ;
+/* PRODUCT CARD */
+.product-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  transition: 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* IMAGE */
+.product-card img {
+  width: 100%;
+  height: 250px;
   object-fit: cover;
   border-radius: 10px;
-  transition: transform 0.4s ease;
 }
 
 .product-card:hover{

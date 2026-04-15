@@ -25,7 +25,7 @@ Order Details: ${details}`;
     <section id="order">
       <div>
         <form className="order-form" onSubmit={handleSubmit}>
-          <h2>Place Your Custom Order</h2>
+          <h2 className="section-title">Place Your Custom Order</h2>
 
           <label>Name:</label>
           <input type="text" name="name" required />
