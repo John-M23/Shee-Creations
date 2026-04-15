@@ -13,14 +13,6 @@ import "./App.css";
 function Home() {
   return (
     <>
-    <section className="seo-text">
-        <p>
-          Shee Creations is a leading handmade crochet fashion brand in Kenya,
-          offering unique crochet dresses, tops, hats, and accessories. Our
-          designs are crafted with love and tailored for modern style and
-          comfort.
-        </p>
-      </section>
 
 
       <Hero />
