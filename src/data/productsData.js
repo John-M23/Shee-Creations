@@ -5,6 +5,22 @@ import product4 from "../assets/Images/Products/product4.png";
 import product5 from "../assets/Images/Products/Product5.png";
 import product6 from "../assets/Images/Products/Product6.png";
 import product7 from "../assets/Images/Products/Product7.png";
+ import product8 from "../assets/Images/Products/Product8.png";
+ import product9 from "../assets/Images/Products/product9.png";
+ import product10 from "../assets/Images/Products/product10.png";
+ import product11 from "../assets/Images/Products/product11.png";
+//  import product12 from "../assets/Images/Products/Product12.png";
+ import product13 from "../assets/Images/Products/product13.png";
+ import product14 from "../assets/Images/Products/product14.png";
+import product15 from "../assets/Images/Products/product15.png";
+import product16 from "../assets/Images/Products/product16.png";
+import product17 from "../assets/Images/Products/product17.png";
+import product18 from "../assets/Images/Products/product18.png";
+import product19 from "../assets/Images/Products/product19.png";
+import product20 from "../assets/Images/Products/product20.png";
+import product21 from "../assets/Images/Products/product21.png";
+import product22 from "../assets/Images/Products/product22.png";
+import product23 from "../assets/Images/Products/product.png";
 
 
 
@@ -14,7 +30,7 @@ import product7 from "../assets/Images/Products/Product7.png";
 const productsData = [
   {
     id: 1,
-    name: "Crochet Pink Top",
+    name: "Crochet Top",
     image: product1,
     description: "Handmade crochet top.",
     prize: 2000,
@@ -23,60 +39,224 @@ const productsData = [
   },
   {
     id: 2,
-    name: "Crochet Hat",
+    name: "Crochet Top",
     image: product2,
-    description: "Warm crochet hat. <br/> 1800",
+    description: "Handmade crochet top.",
     prize: 1800,
     sizes: { Toddler: 1200, Adult: 1800 },
-    category: "toddlers",
+    category:"ladies",
   },
   {
     id: 3,
-    name: "Crochet Bag",
+    name: "Two piece",
     image: product3,
-    description: "Stylish handmade bag.",
+    description: "Two Piece.",
+    prize: 3500,
     sizes: { "One Size": 3500 },
     category: "ladies",
   },
   {
     id: 4,
-    name: "Crochet Scarf",
+    name: "Top ",
     image: product4,
-    description: "Cozy crochet scarf.",
+    description: "Floral top.",
+    prize: 2500,
     sizes: { S: 1500, M: 2000, L: 2500 }, 
-    category: "mens",
+    category: "ladies",
   },
 
   {
      id: 5,
-    name: "Crochet Dress",
+    name: "Top",
     image: product5,
-    description: "Elegant crochet dress.",
+    description: "Top.",
+    prize: 7000,
     sizes: { S: 5000, M: 6000, L: 7000 },
   }  ,
   { 
   id: 6,
-    name: "Crochet Sweater",
+    name: "Shirt ",
     image: product6,
-    description: "Warm crochet sweater.",
-    sizes: { S: 4000, M: 5000, L: 6000 },   
+    description: "Warm crochet shirt.",
+    prize: 5000,
+    sizes: { S: 4000, M: 5000, L: 6000 }, 
+    category: "mens", 
 },
 
 {
   id: 7,
-    name: "Crochet Cardigan",
+    name: "Shirt",
     image: product7,
-    description: "Stylish crochet cardigan.",
+    description: "Warm crochet shirt.",
+    prize: 6500,
     sizes: { S: 4500, M: 5500, L: 6500 },
-  }
+    category: "mens",
+  },
 
-  // {
-  //   id: 8,
-  //   name: "Crochet Blanket",
-  //   image: product8,
-  //   description: "Cozy crochet blanket.",
-  //   sizes: { "One Size": 8000 },
-  // }
+  {
+    id: 8,
+    name: "Top",
+    image: product8,
+    description: "Cozy crochet top.",
+    sizes: { "One Size": 8000 },
+  },
+ {
+    id: 9,
+    name: "Shirt",
+    image: product9,  
+    description: "Stylish crochet shirt.",
+    sizes: { "One Size": 3000 },
+    category: "accessories",
+ }
+//   {
+//     id: 10,
+//     name: "Crochet Bag",
+//     image: product9,  
+//     description: "Stylish crochet bag.",
+//     sizes: { "One Size": 3000 },
+//     category: "accessories",
+//  }
+ ,
+  {
+    id: 10,
+    name: "Shirt",
+    image: product10,  
+    description: "Stylish crochet shirt.",
+    sizes: { "One Size": 3000 },
+    category: "accessories",
+ }
+  
+ ,
+  {
+    id: 11,
+    name: "Shirt",
+    image: product11,  
+    description: "Stylish crochet shirt.",
+    sizes: { "One Size": 3000 },
+    category: "accessories",
+ }
+  
+//  ,
+//   {
+//     id: 9,
+//     name: "Crochet Bag",
+//     image: product12,  
+//     description: "Stylish crochet bag.",
+//     sizes: { "One Size": 3000 },
+//     category: "accessories",
+//  }
+  
+ ,
+  {
+    id: 12,
+    name: "Crochet Shirt",
+    image: product13,  
+    description: "Stylish crochet shirt.",
+    sizes: { "One Size": 3000 },
+    category: "accessories",
+ }
+  
+ ,
+  {
+    id: 13,
+    name: "Crochet Shirt",
+    image: product14,  
+    description: "Stylish crochet shirt.",
+    sizes: { "One Size": 3000 },
+    category: "accessories",
+ }
+  
+ ,
+  {
+    id: 14,
+    name: "Crochet Shirt",
+    image: product15,  
+    description: "Stylish crochet shirt.",
+    sizes: { "One Size": 3000 },
+    category: "accessories",
+ }
+  
+ ,
+  {
+    id: 15,
+    name: "Crochet Shirt",
+    image: product16,  
+    description: "Stylish crochet shirt.",
+    sizes: { "One Size": 3000 },
+    category: "accessories",
+ }
+  
+ ,
+  {
+    id: 16,
+    name: "Crochet Shirt",
+    image: product17,  
+    description: "Stylish crochet shirt.",
+    sizes: { "One Size": 3000 },
+    category: "accessories",
+ }
+  
+ ,
+  {
+    id: 17,
+    name: "Crochet Shirt",
+    image: product18,  
+    description: "Stylish crochet shirt.",
+    sizes: { "One Size": 3000 },
+    category: "accessories",
+ }
+  
+ ,
+  {
+    id: 18,
+    name: "Crochet Binnie Hat",
+    image: product19,  
+    description: "Stylish crochet hat.",
+    sizes: { "One Size": 3000 },
+    category: "accessories",
+ }
+  
+ ,
+  {
+    id: 19,
+    name: "Crochet Hat",
+    image: product20,  
+    description: "Stylish crochet hat.",
+    sizes: { "One Size": 3000 },
+    category: "accessories",
+ }
+  
+  ,
+  {
+    id: 20,
+    name: "dress",
+    image: product21,  
+    description: "Stylish crochet dress.",
+    sizes: { "One Size": 3000 },
+    category: "accessories",
+ }
+  
+ ,
+  {
+    id: 21,
+    name: "Toddler Dress",
+    image: product22,  
+    description: "Stylish crochet dress.",
+    sizes: { "One Size": 3000 },
+    category: "accessories",
+ }
+  
+ ,
+  {
+    id: 22,
+    name: "Crochet Shirt",
+    image: product23,  
+    description: "Stylish crochet shirt.",
+    sizes: { "One Size": 3000 },
+    category: "accessories",
+ }
+
+
 ];
 
 export default productsData;
