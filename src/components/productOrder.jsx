@@ -1,21 +1,25 @@
 import { useParams } from "react-router-dom";
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import productsData from "../data/productsData";
 
 function ProductOrder() {
   const { id } = useParams();
 
-  // Convert id to number safely
   const product = productsData.find(
     (p) => p.id === Number(id)
   );
 
-  const [size, setSize] = useState("");
+  // SAFE DEFAULTS
+  const firstSize =
+    product?.sizes ? Object.keys(product.sizes)[0] : "";
+
+  const [size, setSize] = useState(firstSize);
   const [color, setColor] = useState("");
   const [quantity, setQuantity] = useState(1);
   const [deadline, setDeadline] = useState("");
- const phoneNumber = "254704464147";
-  // If product does not exist
+
+  const phoneNumber = "254704464147";
+
   if (!product) {
     return (
       <div style={{ padding: "50px", textAlign: "center" }}>
@@ -24,72 +28,82 @@ function ProductOrder() {
     );
   }
 
-  // Calculate price safely
-  const unitPrice = size ? product.sizes[size] : 0;
+  // 💰 LIVE PRICE CALCULATION
+  const unitPrice = useMemo(() => {
+    if (product.sizes && size) {
+      return product.sizes[size];
+    }
+    return product.price || 0;
+  }, [size, product]);
+
   const totalPrice = unitPrice * quantity;
 
+  // 📲 WHATSAPP ORDER
   const handleOrder = () => {
-    if (!size || !deadline) {
+    if (!size || !color || !deadline) {
       alert("Please fill all required fields.");
       return;
     }
 
     const message = `
-Hello Sheeh Collection,
+🧶 *Sheeh Collection Order*
 
-I would like to order:
+📦 Product: ${product.name}
+📏 Size: ${size}
+🎨 Color: ${color}
+🔢 Quantity: ${quantity}
+📅 Deadline: ${deadline}
 
-Product: ${product.name}
-Size: ${size}
-Color: ${color}
-Quantity: ${quantity}         
-Deadline: ${deadline}
-Total Price: Ksh ${totalPrice}
+💰 Unit Price: Ksh ${unitPrice}
+💵 Total: Ksh ${totalPrice}
+
+Thank you for your order ❤️
     `;
 
-    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
       message
     )}`;
 
-    window.open(whatsappURL, "_blank");
+    window.open(url, "_blank");
   };
 
   return (
     <div className="order-page">
       <div className="order-container">
-        {/* PRODUCT IMAGE */}
+
+        {/* IMAGE */}
         <div className="order-image">
-          <img
-            src={product.image}
-            alt={product.name}
-            style={{ width: "100%", borderRadius: "10px" }}
-          />
+          <img src={product.image} alt={product.name} />
         </div>
 
-        {/* ORDER FORM */}
+        {/* FORM */}
         <div className="order-form">
+
           <h2>{product.name}</h2>
           <p>{product.description}</p>
 
           {/* SIZE */}
-          <label>Select Size *</label>
-          <select
-            value={size}
-            onChange={(e) => setSize(e.target.value)}
-          >
-            <option value="">Choose Size</option>
-            {Object.keys(product.sizes).map((s) => (
-              <option key={s} value={s}>
-                {s} - Ksh {product.sizes[s]}
-              </option>
-            ))}
-          </select>
+          {product.sizes && (
+            <>
+              <label>Size *</label>
+              <select
+                value={size}
+                onChange={(e) => setSize(e.target.value)}
+              >
+                {Object.keys(product.sizes).map((s) => (
+                  <option key={s} value={s}>
+                    {s} - Ksh {product.sizes[s]}
+                  </option>
+                ))}
+              </select>
+            </>
+          )}
 
           {/* COLOR */}
           <label>Color *</label>
           <input
             type="text"
-            placeholder="Enter preferred color"
+            placeholder="e.g. Pink, Black, White"
             value={color}
             onChange={(e) => setColor(e.target.value)}
           />
@@ -113,15 +127,20 @@ Total Price: Ksh ${totalPrice}
             onChange={(e) => setDeadline(e.target.value)}
           />
 
-          <h3>Total: Ksh {totalPrice}</h3>
+          {/* PRICE DISPLAY */}
+          <div className="price-box">
+            <p>Unit Price: <b>Ksh {unitPrice}</b></p>
+            <h3>Total: Ksh {totalPrice}</h3>
+          </div>
 
+          {/* ORDER BUTTON */}
           <button
             className="submit-btn"
-            disabled={!size}
             onClick={handleOrder}
           >
-            Place Order
+            Order via WhatsApp
           </button>
+
         </div>
       </div>
     </div>

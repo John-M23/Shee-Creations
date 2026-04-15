@@ -1,10 +1,12 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import productsData from "../data/productsData";
 
 function Products() {
+  const navigate = useNavigate();
   const [activeCategory, setActiveCategory] = useState("all");
 
-  // FILTER LOGIC
+  // FILTER PRODUCTS
   const filteredProducts =
     activeCategory === "all"
       ? productsData
@@ -46,7 +48,6 @@ function Products() {
           Mens
         </button>
 
-
         <button
           className={activeCategory === "toddlers" ? "active" : ""}
           onClick={() => setActiveCategory("toddlers")}
@@ -59,7 +60,7 @@ function Products() {
       <div className="products-list">
         {filteredProducts.map((product) => (
           <div key={product.id} className="product-card">
-            
+
             {/* IMAGE */}
             <img src={product.image} alt={product.name} />
 
@@ -70,13 +71,13 @@ function Products() {
             {/* PRICE */}
             <h3>Ksh {product.price}</h3>
 
-            {/* BUTTON */}
-<button
-  className="shop-now"
-  onClick={() => navigate(`/product/${product.id}`)}
->
-  Order Now
-</button>
+            {/* ORDER BUTTON */}
+            <button
+              className="shop-now"
+              onClick={() => navigate(`/product/${product.id}`)}
+            >
+              Order Now
+            </button>
 
           </div>
         ))}
