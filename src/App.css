@@ -173,7 +173,7 @@ section{
 
 /* CATEGORY BAR */
 .category-button {
-  position: sticky;
+  /* position: sticky; */
   top: 80px;
   z-index: 1500;
 
@@ -195,7 +195,7 @@ section{
   padding: 8px 16px;
   border: none;
   border-radius: 20px;
-  background: #eee;
+  background: var(--primary-color);
   cursor: pointer;
   transition: 0.3s;
 }

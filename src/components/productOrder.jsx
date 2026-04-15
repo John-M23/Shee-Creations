@@ -138,7 +138,7 @@ Thank you for your order ❤️
             className="submit-btn"
             onClick={handleOrder}
           >
-            Order via WhatsApp
+            Order Now
           </button>
 
         </div>
