@@ -74,7 +74,10 @@ function Products() {
             {/* ORDER BUTTON */}
             <button
               className="shop-now"
-              onClick={() => navigate(`/product/${product.id}`)}
+             onClick={() => {
+  navigate(`/product/${product.id}`);
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}}
             >
               Order Now
             </button>
