@@ -46,7 +46,8 @@ function ProductOrder() {
     }
 
     const message = `
-🧶 *Sheeh Collection Order*
+    Hello here is my order;
+🧶 *Sheeh Creations  Order*
 
 📦 Product: ${product.name}
 📏 Size: ${size}
@@ -57,7 +58,7 @@ function ProductOrder() {
 💰 Unit Price: Ksh ${unitPrice}
 💵 Total: Ksh ${totalPrice}
 
-Thank you for your order ❤️
+
     `;
 
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
