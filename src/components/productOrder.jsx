@@ -110,7 +110,7 @@ function ProductOrder() {
           />
 
           {/* QUANTITY */}
-          <label>Quantity *</label>
+          <select>Quantity</select>
           <input
             type="number"
             min="1"
