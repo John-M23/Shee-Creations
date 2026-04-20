@@ -78,7 +78,7 @@ const productsData = [
   id: 6,
     name: "Shirt ",
     image: product6,
-    description: "Warm crochet shirt.",
+    description: "Warm crochet shirts.",
     prize: 5000,
     sizes: { S: 4000, M: 5000, L: 6000 }, 
     category: "mens", 
@@ -109,7 +109,7 @@ const productsData = [
     image: product9,  
     description: "Stylish crochet shirt.",
     sizes: { "One Size": 3000 },
-    category: "accessories",
+    category: "mens",
  }
 //   {
 //     id: 10,
@@ -126,7 +126,7 @@ const productsData = [
     image: product10,  
     description: "Stylish crochet shirt.",
     sizes: { "One Size": 3000 },
-    category: "accessories",
+    category: "mens",
  }
   
  ,
@@ -136,7 +136,7 @@ const productsData = [
     image: product11,  
     description: "Stylish crochet shirt.",
     sizes: { "One Size": 3000 },
-    category: "Mens",
+    category: "mens",
  }
   
 //  ,
@@ -156,7 +156,7 @@ const productsData = [
     image: product13,  
     description: "Stylish crochet shirt.",
     sizes: { "One Size": 3000 },
-    category: "Mens",
+    category: "mens",
  }
   
  ,
@@ -166,7 +166,7 @@ const productsData = [
     image: product14,  
     description: "Stylish crochet shirt.",
     sizes: { "One Size": 3000 },
-    category: "Mens",
+    category: "mens",
  }
   
  ,
@@ -176,7 +176,7 @@ const productsData = [
     image: product15,  
     description: "Stylish crochet shirt.",
     sizes: { "One Size": 3000 },
-    category: "Mens",
+    category: "mens",
  }
   
  ,
@@ -186,7 +186,7 @@ const productsData = [
     image: product16,  
     description: "Stylish crochet shirt.",
     sizes: { "One Size": 3000 },
-    category: "Mens",
+    category: "mens",
  }
   
  ,
@@ -196,7 +196,7 @@ const productsData = [
     image: product17,  
     description: "Stylish crochet shirt.",
     sizes: { "One Size": 3000 },
-    category: "Mens",
+    category: "mens",
  }
   
  ,
@@ -206,7 +206,7 @@ const productsData = [
     image: product18,  
     description: "Stylish crochet shirt.",
     sizes: { "One Size": 3000 },
-    category: "Mens",
+    category: "mens",
  }
   
  ,
